@@ -169,17 +169,45 @@ else:
 						print(bi,'removed host')
 						print('host None')
 						
-				elif option=='port' or 'PORT':
+				elif option=='port' or option=='PORT':
 					port.remove(port[0])
 					if port!=[]:
 						for i in len(port)
 							port.remove(port[0]) 
 						
+						print(bi,'removed host')
+						print('host None')
+						
 					else:
 						print('removed port')
 						print('port None')
 						
+				elif option=='session' or option=='SESSION':
+					session.remove(session[0])
+					if session!=[]:
+						for i in len(session):
+							session.remove(session[0])
+							
+						print(bi,'removed host')
+						print('host None')
 						
+					else:
+						print(bi,'removed host')
+						print('host None')
+						
+				elif option=='protocol' or option=='proto' or option=='PROTOCOL' or option=='PROTO':
+					protocol.remove(protocol[0])
+					if protovol!=[]:
+						for i in len(protocol):
+							protocol.remove(protocol[0])
+							
+						print(bi,'removed host')
+						print('host None')
+						
+					else:
+						print(bi,'removed host')
+						print('host None')
+					
 			else:
 				os.system(msf)
 				print()
@@ -193,6 +221,9 @@ else:
 			print(bi+'exiting .......')
 			print(yi+'all processings are killed')
 			exit()
+			
+		except IndexError:
+			print(bi,'no valule to remove it')
 			
 		except:
 			print(bi+'not foundet attribut')
