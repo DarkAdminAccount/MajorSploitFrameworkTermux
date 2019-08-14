@@ -207,7 +207,15 @@ else:
 					else:
 						print(bi,'removed host')
 						print('host None')
-					
+						
+				else:
+					print(bi,'error cannot removing this option')
+					print()
+					continue
+			elif 'use ' in msf:
+				lib=msf.split()[-1]
+				importlib.import_module(lib)
+				
 			else:
 				os.system(msf)
 				print()
@@ -224,7 +232,11 @@ else:
 			
 		except IndexError:
 			print(bi,'no valule to remove it')
+			continue
 			
+		except ModuleNotFoundError:
+			print('option not found')
+			continue
 		except:
 			print(bi+'not foundet attribut')
 			conf=input(yi+'wold like to exit[Y/n]: ')
