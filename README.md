@@ -1,4 +1,4 @@
-# MajorSploitFreameworkTermux
+# MajorSploitFrameworkTermux
 MajorSploitFreamework is a hack tool
 #copyright (c) github: https://github.com/DarkAdminAccount/MajorSploitFreameworkTermux/copyright
 #copyright (c) github: https://github.com/DarkAdminAccount/MajorSploitFreameworkTermux/README.md
