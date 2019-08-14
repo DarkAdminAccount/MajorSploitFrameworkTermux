@@ -64,6 +64,8 @@ if sys.version_info < (3,0):
 	print(yi,'please hit: chmod +x *\n./main_installer')
 	
 else:
+	os.system('clear')
+	banner('False')
 	print(gi,'started msf_console')
 	print()
 	while 1:
@@ -215,6 +217,27 @@ else:
 			elif 'use ' in msf:
 				lib=msf.split()[-1]
 				importlib.import_module(lib)
+				
+			elif 'mkf ' in msf:
+				lib=msf.split()[-1]
+				importlib.import_module(lib)
+				
+			elif msf=='reboot':
+				os.system('python .rebooter.py')
+				
+			elif msf=='banner':
+				banner('False')
+				
+			elif msf=='cBanner':
+				banner('True')
+			elif msf=='exit':
+				print(bi+'exiting ....')
+				exit()
+				
+			elif msf=='cExit':
+				print(bi+'exiting ....')
+				os.system('clear')
+				exit()
 				
 			else:
 				os.system(msf)
